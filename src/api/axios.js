@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Base Axios instance pointing to our Express backend
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://querydesk-backend-nh2b.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
